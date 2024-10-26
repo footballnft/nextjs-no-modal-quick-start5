@@ -6,8 +6,6 @@
 import { useEffect, useState } from "react";
 // IMP START - Quick Start
 import { CHAIN_NAMESPACES, IProvider, WALLET_ADAPTERS, WEB3AUTH_NETWORK } from "@web3auth/base";
-import { UX_MODE, Auth, SUPPORTED_KEY_CURVES } from '@web3auth/auth';
-export * from '@web3auth/auth';
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { Web3AuthNoModal } from "@web3auth/no-modal";
 import { AuthAdapter } from "@web3auth/auth-adapter";

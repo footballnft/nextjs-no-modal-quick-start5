@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createWalletClient, createPublicClient, custom, formatEther, parseEther } from 'viem'
 import { mainnet, polygonAmoy, sepolia } from 'viem/chains'
 import type { IProvider } from "@web3auth/base";
