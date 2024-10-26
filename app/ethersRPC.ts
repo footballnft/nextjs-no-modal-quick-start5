@@ -92,4 +92,7 @@ const signMessage = async (provider: IProvider): Promise<any> => {
   }
 }
 
-export default {getChainId, getAccounts, getBalance, sendTransaction, signMessage};
+// Assign to a variable before exporting
+const ethUtils = { getChainId, getAccounts, getBalance, sendTransaction, signMessage };
+
+export default ethUtils;
