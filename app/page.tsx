@@ -19,7 +19,7 @@ import RPC from "./ethersRPC";
 // IMP END - Blockchain Calls
 
 // IMP START - Dashboard Registration
-const clientId = "BPi5PB_UiIZ-cPz1GtV5i1I2iOSOHuimiXBI0e-Oe_u6X3oVAbCiAZOTEBtTXw4tsluTITPqA8zMsfxIKMjiqNQ"; // get from https://dashboard.web3auth.io
+const clientId = "BBVmbaedfuule7oUOmGaLO8YzQUzjSigtYJiIzlJZh9hxMsrJkmuHoycpI8qCZ6k7AntgyDqNrwIpSWkQwEsUSw"; // get from https://dashboard.web3auth.io
 // IMP END - Dashboard Registration
 
 // IMP START - Chain Config
@@ -42,7 +42,7 @@ const privateKeyProvider = new EthereumPrivateKeyProvider({ config: { chainConfi
 
 const web3auth = new Web3AuthNoModal({
   clientId,
-  web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET,
+  web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
   privateKeyProvider,
 });
 
@@ -50,7 +50,7 @@ const web3auth = new Web3AuthNoModal({
 const openLoginAdapter = new OpenloginAdapter({
   adapterSettings: {
     clientId,
-    network: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET, // Use SAPPHIRE_DEVNET for development
+    network: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET, // Use SAPPHIRE_DEVNET for development
   },
 });
 web3auth.configureAdapter(openLoginAdapter);
