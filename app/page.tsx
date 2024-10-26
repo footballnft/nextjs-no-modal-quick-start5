@@ -74,7 +74,7 @@ function App() {
 
   const login = async () => {
     // IMP START - Login
-    const web3authProvider = await web3auth.connectTo(WALLET_ADAPTERS.AUTH, {
+    const web3authProvider = await web3auth.connectTo(WALLET_ADAPTERS.OPENLOGIN, {
       loginProvider: "google",
     });
     // IMP END - Login
