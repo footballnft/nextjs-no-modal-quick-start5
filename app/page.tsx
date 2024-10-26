@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { CHAIN_NAMESPACES, IProvider, WALLET_ADAPTERS, WEB3AUTH_NETWORK } from "@web3auth/base";
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { Web3AuthNoModal } from "@web3auth/no-modal";
+import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 import { AuthAdapter } from "@web3auth/auth-adapter";
 // IMP END - Quick Start
 
@@ -45,8 +46,14 @@ const web3auth = new Web3AuthNoModal({
   privateKeyProvider,
 });
 
-const authAdapter = new AuthAdapter();
-web3auth.configureAdapter(authAdapter);
+// Configure OpenLoginAdapter for SAPPHIRE_DEVNET
+const openLoginAdapter = new OpenloginAdapter({
+  adapterSettings: {
+    clientId,
+    network: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET, // Use SAPPHIRE_DEVNET for development
+  },
+});
+web3auth.configureAdapter(openLoginAdapter);
 // IMP END - SDK Initialization
 
 function App() {
