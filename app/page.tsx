@@ -9,7 +9,7 @@ import { CHAIN_NAMESPACES, IProvider, WALLET_ADAPTERS, WEB3AUTH_NETWORK } from "
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { Web3AuthNoModal } from "@web3auth/no-modal";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
-import { AuthAdapter } from "@web3auth/auth-adapter";
+
 // IMP END - Quick Start
 
 // IMP START - Blockchain Calls
